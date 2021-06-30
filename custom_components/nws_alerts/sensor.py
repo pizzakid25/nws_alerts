@@ -244,8 +244,6 @@ class NWSAlertSensor(Entity):
                 
                 message_type += type
 
-            display_desc.replace(" ", " &nbsp;")
-
             if headlines:
                 num_headlines = len(headlines)
                 i = 0
