@@ -219,8 +219,24 @@ class NWSAlertSensor(Entity):
                 if display_desc != '':
                     display_desc += '\n---\n'
 
-                display_desc += '### %s\n**Message Type:** %s\n**Severity:** %s\n**Certainty:** %s\n**Description:** \n%s\n**Instruction:** %s' % (headline, type, severity, certainty, description, instruction)
-                
+		if headline != '':
+		    display_desc += '### %s' % headline
+
+		if type != '':
+		    display_desc += '\n**Message Type:** %s' % type
+
+		if severity != '':
+		    display_desc += '\n**Severity:** %s' % severity
+
+		if certainty != '':
+		    display_desc += '\n**Certainty:** %s' % certainty
+
+		if description != '':
+		    display_desc += '\n**Description:** \n%s' % description
+
+		if instruction != '':
+		    display_desc += '\n**Instruction:** %s' % instruction
+		
                 if event_id != '':
                     event_id += ', '
 					
